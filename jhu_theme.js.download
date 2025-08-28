@@ -1,0 +1,93 @@
+/* CANVAS-87 Ally */
+
+window.ALLY_CFG = {
+    'baseUrl': 'https://prod.ally.ac',
+    'clientId': 12660,
+    'lti13Id': '130440000000000114'
+};
+$.getScript(ALLY_CFG.baseUrl + '/integration/canvas/ally.js');
+
+
+/* CANVAS-480 EvaluationKIT */
+
+/*EvaluationKIT START*/
+var evalkit_jshosted = document.createElement('script');evalkit_jshosted.setAttribute('defer', 'defer');evalkit_jshosted.setAttribute('type', 'text/javascript');evalkit_jshosted.setAttribute('src', 'https://jhu.evaluationkit.com/canvas/js');document.getElementsByTagName('head')[0].appendChild(evalkit_jshosted);
+/*EvaluationKIT END*/
+
+/* CANVAS-65 CidiLabs */
+
+////////////////////////////////////////////////////
+// DESIGN TOOLS CONFIG                            //
+////////////////////////////////////////////////////
+// Copyright (C) 2017  Utah State University
+var DT_variables = {
+        iframeID: '',
+        // Path to the hosted USU Design Tools
+        path: 'https://designtools.ciditools.com/',
+        templateCourse: '7973',
+        // OPTIONAL: Button will be hidden from view until launched using shortcut keys
+        hideButton: true,
+    	 // OPTIONAL: Limit by course format
+	     limitByFormat: false, // Change to true to limit by format
+	     // adjust the formats as needed. Format must be set for the course and in this array for tools to load
+	     formatArray: [
+            'online',
+            'on-campus',
+            'blended'
+        ],
+        // OPTIONAL: Limit tools loading by users role
+        limitByRole: false, // set to true to limit to roles in the roleArray
+        // adjust roles as needed
+        roleArray: [
+            'student',
+            'teacher',
+            'admin'
+        ],
+        // OPTIONAL: Limit tools to an array of Canvas user IDs
+        limitByUser: false, // Change to true to limit by user
+        // add users to array (Canvas user ID not SIS user ID)
+        userArray: [
+            '1234',
+            '987654'
+        ],
+		 // OPTIONAL: Relocate Ally alternative formats dropdown and hide heading
+		 overrideAllyHeadings: true, // CANVAS-170
+		 // OPTIONAL: Make assignment rubrics sortable
+		 sortableRubrics: true, // CANVAS-907
+		 // OPTIONAL: Transform people page ina course to show student cards
+		 showStudentCards: false,
+		 // OPTIONAL: The following takes the place of adding JS at a sub-account level to make the tools available to multiple sub-accounts
+        specifiedAccounts: [
+        {
+            identifier: 'SOE',
+            accounts: ['109','144','145','146','147','148','176','182','183','184','185','186','390','391','392','393','394','395','396','397','398','399','400','401','402','403','404','405','406','407','490'],
+            customizationsType: 'Primary',
+            customizationsCourseId: '7973',
+        },
+        {
+            identifier: 'AAP',
+            accounts: ['106','119','120','121','122','123','171','188','189','207','209','210','247','248','249','250','251','252','253','254','255','256','257','258','259','260','261','262','263','264','265','266','267','268','269','270','271','272','273','274','275','276','277','278','279','280','333','481'],
+            customizationsType: 'Primary',
+            customizationsCourseId: '7974',
+        },
+        {
+            identifier: 'BU',
+            accounts: ['108','124','125','126','127','128','172','190','191','211','213','214','281','282','482'],
+            customizationsType: 'Primary',
+            customizationsCourseId: '42610',
+        },		
+    ]
+
+};
+
+// Run the necessary code when a page loads
+$(document).ready(function () {
+    'use strict';
+    // This runs code that looks at each page and determines what controls to create
+    $.getScript(DT_variables.path + 'js/master_controls.js', function () {
+        console.log('master_controls.js loaded');
+    });
+});
+////////////////////////////////////////////////////
+// END DESIGN TOOLS CONFIG                        //
+////////////////////////////////////////////////////

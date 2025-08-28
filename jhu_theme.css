@@ -1,0 +1,32 @@
+@import 'https://jhu.evaluationkit.com/canvas/css'; /* CANVAS-480 EvaluationKIT */
+
+/* CANVAS-65 CidiLabs */
+
+/*********************************************************************/
+/***** BEGIN DESIGN TOOLS THEME IMPORT & CUSTOMIZATION  **************/
+/*********************************************************************/
+/* Import statements need to be at the top of your CSS file */
+/* For Main CSS file */
+@import url(https://designtools.ciditools.com/css/themes.css);
+/* For Mobile app CSS file */
+/*@import url(https://designtools.ciditools.com/css/app.css);*/
+/* Institution color customizations */
+@import url(https://designtools.ciditools.com/css/inst_theme_overrides.css);
+/* Theme Colors */
+:root {
+	--dt-color-primary: #002D72;
+	--dt-color-primary-contrast: #FFFFFF;
+	--dt-color-primary-dark-text: #002D72;
+	--dt-color-secondary: #0072CE;
+	--dt-color-secondary-contrast: #FFFFFF;
+	--dt-color-secondary-dark-text: #002D72;
+	--dt-color-accent: #757575;
+	--dt-color-accent-contrast: #FFFFFF;
+	--dt-color-graybg: #E6E6E6;
+	--dt-color-graybg-contrast: #000000;
+}
+
+/*********************************************************************/
+/***** END DESIGN TOOLS THEME IMPORT & CUSTOMIZATION   ***************/
+/*********************************************************************/
+
